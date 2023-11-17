@@ -49,7 +49,7 @@ I was curious by the server-side capabilities since of Next.js 13, especially si
 
 Upon examining the documentation, I noticed that the https://api.1337co.de/v3/employees endpoint lacked support for filtering. This would typically result in retrieving all employee data on the client side in a purely frontend application.
 
-To take advantage server-side computation power, I implemented an endpoint, api/employee, within the app. This acts as an middle layer, handling both filtering and pagination on the server. The client receives a maximum set of employee items. This is particularly beneficial for performance, especially on mobile devices, as it minimizes data transfer to the client side.
+To take advantage server-side computation power, I implemented an endpoint, api/employee, within the app. This acts as an middle layer, handling both filtering and pagination on the server. The client receives a minimun set of employee items. This is particularly beneficial for performance, especially on mobile devices, as it minimizes data transfer to the client side.
 
 The choice to use TypeScript was mainly to enhance developer productivity and code quality. 
 
