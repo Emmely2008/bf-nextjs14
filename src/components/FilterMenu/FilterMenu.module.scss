@@ -1,0 +1,29 @@
+.searchContainer {
+  display: flex;
+  justify-content: center;
+  gap: 1rem; // Adds space between the input fields
+  margin: 1rem 0;
+
+  /* Mobile */
+  @media (max-width: 700px) {
+    flex-direction: column;
+  }
+
+  input[type="search"] {
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--border-color);
+    border-radius: 20px; // Rounded borders
+    font-size: 1rem;
+    outline: none; 
+    transition: border-color 0.3s ease;
+
+    &:focus {
+      border-color: var(--primary-color);
+    }
+
+    &::placeholder {
+      color: var(--placeholder-color);
+    }
+
+  }
+}

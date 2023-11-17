@@ -1,0 +1,40 @@
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.button {
+  padding: 0.5rem 1rem;
+  background-color: var(--button-bg-color);
+  color: var(--button-text-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+
+  &:not(:disabled):hover,
+  &:not(:disabled):focus {
+    background-color: var(--button-hover-bg-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  &:disabled {
+    background-color: var(--disabled-bg-color);
+    color: var(--disabled-text-color);
+    cursor: not-allowed;
+
+
+  }
+  svg{
+    fill: currentColor;
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+.pageInfo {
+  font-size: 1rem;
+  color: var(--text-color);
+}

@@ -1,0 +1,63 @@
+  .card {
+    border-radius: var(--border-radius);
+    background: rgba(var(--card-rgb), 0);
+    border: 1px solid rgba(var(--card-border-rgb), 0);
+    transition: background 200ms, border 200ms;
+    align-items: center;
+    text-align: center;
+
+    &:hover {
+      background: rgba(var(--card-rgb), 0.1);
+      border: 1px solid rgba(var(--card-border-rgb), 0.15);
+    }
+  }
+
+  .portrait {
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+  }
+
+  .name {
+    font-weight: 600;
+    margin: 0.5rem;
+  }
+
+  .office {
+    margin: 0.5rem;
+    opacity: 0.6;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    max-width: 30ch;
+  }
+
+  .socialLinks {
+    margin: 0.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+    a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 35px;
+      height: 35px;
+
+      @media (hover: hover) and (pointer: fine) {
+        &:hover {
+          transform: translateX(2px);
+        }
+      }
+
+      svg {
+        fill: currentColor;
+      } 
+    }
+  }
+ 
+  @media (prefers-reduced-motion) {
+    .card {
+      transition: none;
+    }
+  }
