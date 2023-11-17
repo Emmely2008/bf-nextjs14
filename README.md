@@ -33,7 +33,7 @@ Package Manager: You can use either npm or Yarn. If you haven't installed Yarn a
 
 `yarn install`
 
-Rename `.env copy.local` to `.env.local` and enter a valid API key.
+Rename `.example_ env.local` to `.env.local` and enter a valid API key.
 
 First, run the development server:
 

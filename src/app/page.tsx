@@ -24,6 +24,10 @@ export default function Home() {
   };
 
   useEffect(() => {
+    setCurrentPage(1);
+  }, [nameFilter, officeFilter]);
+
+  useEffect(() => {
     const buildQueryString = () => {
       const queries = new URLSearchParams();
       if (nameFilter) queries.append('name', nameFilter);
