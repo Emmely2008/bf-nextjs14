@@ -5,7 +5,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const { query } = req;
 
   const page = parseInt(query.page as string) || 1;
-  const limit = parseInt(query.limit as string) || 9;
+  const limit = parseInt(query.limit as string) || 12;
   const nameFilter = query.name as string || '';
   const officeFilter = query.office as string || '';
 
