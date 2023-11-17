@@ -10,10 +10,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const officeFilter = query.office as string || '';
 
   try {
+    const headers: HeadersInit = new Headers();
+    if (process.env.NEXT_PUBLIC_API_KEY) {
+      headers.set('Authorization', process.env.NEXT_PUBLIC_API_KEY);
+    }
+
+    // Fetch data from the external API
     const apiRes = await fetch('https://api.1337co.de/v3/employees', {
-      headers: {
-        'Authorization': process.env.NEXT_PUBLIC_API_KEY,
-      },
+      headers: headers,
     });
 
     if (!apiRes.ok) {
