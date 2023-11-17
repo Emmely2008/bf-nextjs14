@@ -3,7 +3,6 @@
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import styles from './page.module.scss';
-import Pagination from '../components/Pagination/Pagination';
 import PaginationMobile from '../components/Pagination/PaginationMobile';
 import FilterMenu from '../components/FilterMenu/FilterMenu';
 import EmployeeList from '../components/EmployeeList/EmployeeList';
